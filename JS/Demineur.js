@@ -73,20 +73,23 @@ et test si la bombe est piegé, non piegé ou desarmocer
         alert("Cette box a deja ete desarmoce, veuillez rejoue");
     }
 }
+function init(){
+    document.getElementById("J1").innerHTML = Tab_Joueurs[0][0];
+    document.getElementById("J2").innerHTML = Tab_Joueurs[1][0];
+    document.getElementById("J3").innerHTML = Tab_Joueurs[2][0];
+    document.getElementById("J4").innerHTML = Tab_Joueurs[3][0];
+}
 //Declaration variable
 /*
 Ces variables seront utilisées dans tout le programme
 */
 let Tab_Bombes = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; 
-let Tab_Joueurs = [[document.getElementById("J1"),0,3],
-               [document.getElementById("J2"),0,3],
-               [document.getElementById("J3"),0,3],
-               [document.getElementById("J4"),0,3],
+let Tab_Joueurs = [[prompt("Veuillez entre le nom du joueur 1"),0,3],
+               [prompt("Veuillez entre le nom du joueur 2"),0,3],
+               [prompt("Veuillez entre le nom du joueur 3"),0,3],
+               [prompt("Veuillez entre le nom du joueur 4"),0,3],
                  ];
+console.log(Tab_Joueurs);
 let nb_bombe = Number(prompt("Veuillez choisir le nombre de bombes que vous voulez"));
-Tab_Joueurs[0][0].innerText= prompt("Veuillez entre le nom du joueur 1");
-Tab_Joueurs[1][0].innerText= prompt("Veuillez entre le nom du joueur 2");
-Tab_Joueurs[2][0].innerText= prompt("Veuillez entre le nom du joueur 3");
-Tab_Joueurs[3][0].innerText= prompt("Veuillez entre le nom du joueur 4");
 let id_joueur = 0;
 Placement_Bombe(nb_bombe);
