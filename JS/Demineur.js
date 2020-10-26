@@ -57,8 +57,10 @@ et test si la bombe est piegé, non piegé ou desarmocer
     if(Tab_Bombes[id_box] == 1){
         Tab_Bombes[id_box] = 2;
         Tab_Joueurs[id_joueur][2] -= 1;
-        Tab_Joueurs[id_joueur][1] += 100;
+        Tab_Joueurs[id_joueur][1] -= 100;
         alert("Outch ! Vous êtes tombe sur une bombe");
+        console.log(Tab_Joueurs[id_joueur][1]," points");
+        console.log(Tab_Joueurs[id_joueur][1]," vies");
         Placement_Bombe(nb_bombe);
         Set_Tour();
     }
@@ -66,6 +68,7 @@ et test si la bombe est piegé, non piegé ou desarmocer
         Tab_Bombes[id_box] = 2;
         Tab_Joueurs[id_joueur][1] += 50;
         alert("Vous avez de la chance , cette box ne contient pas de bombe !");
+        console.log(Tab_Joueurs[id_joueur][1]," points");
         Placement_Bombe(nb_bombe);
         Set_Tour();
     }
