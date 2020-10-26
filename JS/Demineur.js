@@ -84,9 +84,9 @@ let Tab_Joueurs = [[document.getElementById("J1"),0,3],
                [document.getElementById("J4"),0,3],
                  ];
 let nb_bombe = Number(prompt("Veuillez choisir le nombre de bombes que vous voulez"));
-Tab_Joueurs[0][0]= prompt("Veuillez entre le nom du joueur 2");
-Tab_Joueurs[1][0]= prompt("Veuillez entre le nom du joueur 2");
-Tab_Joueurs[2][0]= prompt("Veuillez entre le nom du joueur 3");
-Tab_Joueurs[3][0]= prompt("Veuillez entre le nom du joueur 4");
+Tab_Joueurs[0][0].innerText= prompt("Veuillez entre le nom du joueur 2");
+Tab_Joueurs[1][0].innerText= prompt("Veuillez entre le nom du joueur 2");
+Tab_Joueurs[2][0].innerText= prompt("Veuillez entre le nom du joueur 3");
+Tab_Joueurs[3][0].innerText= prompt("Veuillez entre le nom du joueur 4");
 let id_joueur = 0;
 Placement_Bombe(nb_bombe);
